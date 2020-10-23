@@ -1,15 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ImageResize from './components/ImageResize';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World! Send from the server.
-        </p>
+        <ImageResize></ImageResize>
       </header>
     </div>
   );

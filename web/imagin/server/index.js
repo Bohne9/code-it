@@ -25,13 +25,14 @@ app.get('/', (req, res) => {
          data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
        );
      });
-   });
+});    
+
    
-   app.use(express.static('./build'));
-   
-   app.listen(PORT, () => {
+app.use(express.static('./build'));
+
+app.listen(PORT, () => {
      console.log(`Server is listening on port ${PORT}`);
-   });
+});
 
 
 
