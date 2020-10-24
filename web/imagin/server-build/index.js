@@ -134,6 +134,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./src/components/ImageResize.css":
+/*!****************************************!*\
+  !*** ./src/components/ImageResize.css ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.i, \".image {\\n     border-radius: 10px;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ __webpack_exports__[\"default\"] = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/components/ImageResize.css?");
+
+/***/ }),
+
 /***/ "./src/components/ImageResize.js":
 /*!***************************************!*\
   !*** ./src/components/ImageResize.js ***!
@@ -142,7 +154,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ImageResize; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nclass ImageResize extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  constructor() {\n    super();\n    this.state = {\n      resizedImgUrl: \"\",\n      originalImgUrl: \"\"\n    };\n  }\n\n  render() {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Choose file\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"input\", {\n      type: \"file\"\n    }));\n  }\n\n}\n\n//# sourceURL=webpack:///./src/components/ImageResize.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ImageResize; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ImageResize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ImageResize.css */ \"./src/components/ImageResize.css\");\n\n // import { Storage } from '@google-cloud/storage'\n// const bucketName = \"code-it-image-bucket\"\n// const storage = new Storage();\n\nclass ImageResize extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  constructor() {\n    super();\n    this.state = {\n      originalImgUrl: null\n    };\n    this.handleChange = this.handleChange.bind(this); // this.handleUpload = this.handleUpload.bind(this)\n  }\n\n  handleChange(event) {\n    this.setState({\n      originalImgUrl: URL.createObjectURL(event.target.files[0])\n    });\n    console.log('Selected image');\n  }\n\n  handleUpload(event) {// this.uploadImage(this.state.originalImgUrl)\n  } // async uploadImage(filename) {\n  //      await storage.bucket(bucketName).upload(`imageResize/${filename}`, {\n  //           // Support for HTTP requests made with `Accept-Encoding: gzip`\n  //           gzip: true,\n  //           metadata: {\n  //                cacheControl: 'public, max-age=31536000',\n  //           }\n  //      });\n  //      console.log('Image uploaded to: ' + `imageResize/${filename}`)\n  // }\n\n\n  render() {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Choose file\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"input\", {\n      type: \"file\",\n      onChange: this.handleChange\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n      className: \"image\",\n      src: this.state.originalImgUrl,\n      width: \"500x\"\n    }));\n  }\n\n}\n\n//# sourceURL=webpack:///./src/components/ImageResize.js?");
 
 /***/ }),
 
